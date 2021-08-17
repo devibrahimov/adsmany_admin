@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/giris', function () {
     return view('welcome');
+})->name('logincontroller');
+
+Route::post('/giris','AuthController@logincontroll');
+
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/cixis','AuthController@logout')->name('logout');
+    Route::get('/','GeneralController@dashboard')->name('admin');
+
+    Route::get('/dillerin-idaresi','LanguagesController@languages')->name('languagesSetting');
+    Route::get('/yeni-dil-elave-et','LanguagesController@create')->name('newLang');
+    Route::post('/yeni-dil-elave-et','LanguagesController@store');
+
+
+
 });

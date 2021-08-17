@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Admintres I Fast build Admin dashboard for any platform</title>
-    <meta name="description" content="Admintres is a Dashboard & Admin Site Responsive Template by hencework." />
-    <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Admintres Admin, Admintresadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
-    <meta name="author" content="hencework"/>
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0, user-scalable=no,  initial-scale=1.0" />
+    <title> Adsmany idarə etmə sitemi</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- vector map CSS -->
     <link href="/vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <!-- Custom CSS -->
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -36,18 +31,16 @@
                                     <h6 class="text-center nonecase-font txt-grey"> Adsmany idarə etmə sitemi </h6>
                                 </div>
                                 <div class="form-wrap">
-                                    <form action="#">
+                                    <form action="{{route('logincontroller')}}" method="post">
+                                        @csrf
                                         <div class="form-group">
                                             <label class="control-label mb-10" for="exampleInputEmail_2"> Email </label>
-                                            <input type="email" class="form-control" required="" id="exampleInputEmail_2" placeholder="Enter email">
+                                            <input type="email" class="form-control" required="" id="exampleInputEmail_2" name="email" placeholder="Enter email">
                                         </div>
                                         <div class="form-group">
                                             <label class="pull-left control-label mb-10" for="exampleInputpwd_2">Şifrə</label>
-                                            <a class="capitalize-font txt-orange block mb-10 pull-right font-12" href="forgot-password.html">forgot password ?</a>
-                                            <div class="clearfix"></div>
-                                            <input type="password" class="form-control" required="" id="exampleInputpwd_2" placeholder="Enter pwd">
+                                            <input type="password" class="form-control" required="" id="exampleInputpwd_2" name="password" placeholder="Enter pwd">
                                         </div>
-
                                         <div class="form-group text-center">
                                             <button type="submit" class="btn btn-orange btn-rounded"> Giriş </button>
                                         </div>
