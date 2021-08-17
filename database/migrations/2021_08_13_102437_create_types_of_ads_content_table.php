@@ -14,11 +14,11 @@ class CreateTypesOfAdsContentTable extends Migration
     public function up()
     {
         Schema::create('types_of_ads_content', function (Blueprint $table) {
-//            $table->id();
+            $table->id();
             $table->unsignedBigInteger('typ_ads_id');
             $table->string('lang');
             $table->string('name');
-
+            $table->timestamps();
         });
     }
 

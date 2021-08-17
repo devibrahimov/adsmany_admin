@@ -14,12 +14,12 @@ class CreateProgramsSerialsLangContentTable extends Migration
     public function up()
     {
         Schema::create('programs_serials_langContent', function (Blueprint $table) {
-//            $table->id();
+            $table->id();
             $table->unsignedBigInteger('programs_serials_id');
             $table->string('lang');
             $table->string('name');
             $table->text('about_of');
-
+            $table->timestamps();
         });
     }
 
