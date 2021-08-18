@@ -34,6 +34,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/yeni-olke-elave-et','CountriesController@store');
     Route::get('/olke-redakte-et/{id}','CountriesController@edit')->name('CountryEdit');
     Route::post('/olke-redakte-et/{id}','CountriesController@update');
+
     Route::get('/olke-sil/{id}','CountriesController@delete');
 
    Route::get('/tv-kanallar','TvCannelController@dashborad')->name('tv_channels');

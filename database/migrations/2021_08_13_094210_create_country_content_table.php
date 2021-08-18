@@ -18,7 +18,7 @@ class CreateCountryContentTable extends Migration
             $table->unsignedBigInteger('country_id');
             $table->string('language');
             $table->string('name');
-
+            $table->timestamps();
         });
     }
 

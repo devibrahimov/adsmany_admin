@@ -64,9 +64,6 @@ class CountriesController extends Controller
         }
     }
 
-
-
-
     public function edit($id){
         $languages = Language::all();
         $country = Country::join('country_content','countries.id','=','country_content.country_id')
@@ -74,6 +71,8 @@ class CountriesController extends Controller
 
         return view('pages.countries.edit',compact(['languages','country','id']));
     }
+
+
 
     public function update($id,Request $request){
 
@@ -98,7 +97,9 @@ class CountriesController extends Controller
                         array_push($datacontent, $data);
                     }
                 }
+
             }
+
             else{
                 foreach (languages() as $lang) {
                     $thisrow = DB::table('country_content')->where('country_id', $id)
@@ -135,6 +136,7 @@ class CountriesController extends Controller
                 }
             }
             DB::table('country_content')->insert($datacontent);
+
 
             $feedbackdata = [
                 'title' => 'Başarılı !',
