@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Admintres I Fast build Admin dashboard for any platform</title>
+    <title>Adsmany-Adminpanel</title>
     <meta name="description" content="Admintres is a Dashboard & Admin Site Responsive Template by hencework." />
     <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Admintres Admin, Admintresadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
     <meta name="author" content="hencework"/>
@@ -146,7 +146,24 @@
 
 <!-- Init JavaScript -->
 <script src="/dist/js/init.js"></script>
+
+<script src="/general/sweetalert.min.js"></script>
 @section('js')
+
+    @if(session()->has('feedback'))
+        @php $feedback =  session()->get('feedback') ;
+        @endphp
+        <script>
+
+            swal({
+                title: "{{ $feedback['title']}}",
+                text: "{{ $feedback['text']}}",
+                icon: "{{ $feedback['icon']}}",
+                button: "{{ $feedback['button']}}",
+
+            });
+        </script>
+    @endif
 </body>
 
 </html>

@@ -16,8 +16,7 @@ class CreateTvChannelsTable extends Migration
         Schema::create('tv_channels', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('country_id');
-            $table->string('lang');
-            $table->json('data');
+            $table->string('logo');
             $table->timestamps();
         });
     }

@@ -26,7 +26,14 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/dillerin-idaresi','LanguagesController@languages')->name('languagesSetting');
     Route::get('/yeni-dil-elave-et','LanguagesController@create')->name('newLang');
     Route::post('/yeni-dil-elave-et','LanguagesController@store');
+    Route::get('/dil-edit-et/{id}','LanguagesController@edit')->name('LangEdit');
+    Route::post('/dil-edit-et/{id}','LanguagesController@update');
 
+    Route::get('/olkeler','CountriesController@countries')->name('countries');
+    Route::get('/yeni-olke-elave-et','CountriesController@create')->name('newCountry');
+    Route::post('/yeni-olke-elave-et','CountriesController@store');
+    Route::get('/olke-redakte-et/{id}','CountriesController@edit')->name('CountryEdit');
+    Route::post('/olke-redakte-et/{id}','CountriesController@update');
 
-
+    Route::get('/olke-sil/{id}','CountriesController@delete');
 });
