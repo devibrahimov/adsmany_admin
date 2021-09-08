@@ -18,7 +18,7 @@ class CreateTypesOfAdsContentTable extends Migration
             $table->unsignedBigInteger('typ_ads_id');
             $table->string('lang');
             $table->string('name');
-            $table->timestamps();
+
         });
     }
 

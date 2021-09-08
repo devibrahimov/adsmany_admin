@@ -34,6 +34,18 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/yeni-olke-elave-et','CountriesController@store');
     Route::get('/olke-redakte-et/{id}','CountriesController@edit')->name('CountryEdit');
     Route::post('/olke-redakte-et/{id}','CountriesController@update');
-
     Route::get('/olke-sil/{id}','CountriesController@delete');
+
+   Route::get('/tv-kanallar','TvCannelController@dashborad')->name('tv_channels');
+   Route::get('/yeni-tv-kanallar','TvCannelController@create')->name('newChannels');
+   Route::post('/yeni-tv-kanallar','TvCannelController@store');
+   Route::get('/tv-kanal-redakte-et/{id}','TvCannelController@edit')->name('ChannelEdit');
+   Route::post('/tv-kanal-redakte-et/{id}','TvCannelController@update');
+
+   Route::get('/programlar','ProgramsSerialsController@dashborad')->name('programs');
+   Route::get('/yeni-programlar','ProgramsSerialsController@create')->name('newProgram');
+   Route::post('/yeni-programlar','ProgramsSerialsController@store');
+   Route::get('/program-redakte-et/{id}','ProgramsSerialsController@edit')->name('ProgramEdit');
+   Route::post('/program-redakte-et/{id}','ProgramsSerialsController@update');
+
 });
