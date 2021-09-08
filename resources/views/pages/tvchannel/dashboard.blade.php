@@ -30,7 +30,7 @@
                     <div class="panel-body">
                         <div class="table-wrap mt-40">
                             <div class="table-responsive">
-                                <table  id="datable_1" class="table table-hover table-bordered display   mb-0">
+                                <table class="table mb-0">
                                     <thead>
                                     <tr>
                                         <th>#ID</th>
@@ -45,7 +45,7 @@
                                         <tr>
                                             <td>{{$channel->id}}</td>
                                             <td>{{$channel->country->name}}</td>
-                                            <td style="background-color: rgba(0,136,204,0.51)">
+                                            <td>
                                                 <img src="{{$channel->logo}}" width="70px" alt="">
                                             </td>
                                             <td>{{$channel->name}}</td>
@@ -68,6 +68,4 @@
 
 
 @section('js')
-
-
 @endsection

@@ -18,7 +18,7 @@ class CreateTvchannelContentTable extends Migration
             $table->unsignedBigInteger('channel_id');
             $table->string('lang');
             $table->string('name');
-            $table->timestamps();
+
         });
     }
 

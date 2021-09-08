@@ -19,7 +19,7 @@ class CreateProgramsSerialsLangContentTable extends Migration
             $table->string('lang');
             $table->string('name');
             $table->text('about_of');
-            $table->timestamps();
+
         });
     }
 

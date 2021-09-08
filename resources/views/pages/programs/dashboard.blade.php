@@ -16,6 +16,7 @@
             </div>
         </div>
 
+
         <div class="col-sm-12">
             <div class="panel panel-default border-panel card-view">
                 <div class="panel-heading">
@@ -28,7 +29,7 @@
                     <div class="panel-body">
                         <div class="table-wrap mt-40">
                             <div class="table-responsive">
-                                <table id="datable_1" class="table table-hover table-bordered display  mb-0">
+                                <table class="table mb-0">
                                     <thead>
                                     <tr>
                                         <th>#ID</th>
@@ -50,7 +51,7 @@
                                             </td>
                                             <td>{{$program->name}}</td>
                                             <td>
-                                                <a href="{{route('ProgramEdit',$program->id)}}" class="label label-danger"><i class="fa fa-pencil"> </i> Redaktə Et</a>
+                                                <a href="{{route('ChannelEdit',$program->id)}}" class="label label-danger"><i class="fa fa-pencil"> </i> Redaktə Et</a>
                                             </td>
                                         </tr>
                                     @endforeach

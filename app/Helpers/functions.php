@@ -17,6 +17,17 @@
 
     }
 
+    function tvchannel($array,$language){
+
+        foreach ($array as $data){
+            if ( $data['lang'] == $language){
+                return $data['name'] ;
+            }
+        }
+
+
+    }
+
 
 
 

@@ -29,19 +29,9 @@
     <!-- Toast CSS -->
     <link href="/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Morris Charts CSS -->
-    <link href="/vendors/bower_components/morris.js/morris.css" rel="stylesheet" type="text/css"/>
-
-    <!-- Chartist CSS -->
-    <link href="/vendors/bower_components/chartist/dist/chartist.min.css" rel="stylesheet" type="text/css"/>
-
-
-    <!-- vector map CSS -->
-    <link href="/vendors/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" type="text/css"/>
-
-    <!-- Custom CSS -->
+        @yield('css')
+<!-- Custom CSS -->
     <link href="/dist/css/style.css" rel="stylesheet" type="text/css">
-    @yield('css')
 </head>
 
 <body>
@@ -104,10 +94,6 @@
 <!-- Slimscroll JavaScript -->
 <script src="/dist/js/jquery.slimscroll.js"></script>
 
-<!-- Progressbar Animation JavaScript -->
-<script src="/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-<script src="/vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
-
 <!-- Fancy Dropdown JS -->
 <script src="dist/js/dropdown-bootstrap-extended.js"></script>
 
@@ -120,36 +106,16 @@
 <!-- Switchery JavaScript -->
 <script src="/vendors/bower_components/switchery/dist/switchery.min.js"></script>
 
-<!-- Vector Maps JavaScript -->
-<script src="/vendors/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="/vendors/vectormap/jquery-jvectormap-us-aea-en.js"></script>
-<script src="/vendors/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script src="/dist/js/vectormap-data.js"></script>
-
 <!-- Toast JavaScript -->
 <script src="/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
 
-<!-- Piety JavaScript -->
-<script src="/vendors/bower_components/peity/jquery.peity.min.js"></script>
-<script src="/dist/js/peity-data.js"></script>
 
-<!-- Chartist JavaScript -->
-<script src="/vendors/bower_components/chartist/dist/chartist.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script src="/vendors/bower_components/raphael/raphael.min.js"></script>
-<script src="/vendors/bower_components/morris.js/morris.min.js"></script>
-<script src="/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
-
-<!-- ChartJS JavaScript -->
-<script src="/vendors/chart.js/Chart.min.js"></script>
-
+@section('js')
 <!-- Init JavaScript -->
 <script src="/dist/js/init.js"></script>
 
-<script src="/general/sweetalert.min.js"></script>
-@section('js')
 
+    <script src="/general/sweetalert.min.js"></script>
     @if(session()->has('feedback'))
         @php $feedback =  session()->get('feedback') ;
         @endphp
