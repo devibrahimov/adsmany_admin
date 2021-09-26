@@ -51,7 +51,7 @@
                                             </td>
                                             <td>{{$program->name}}</td>
                                             <td>
-                                                <a href="{{route('ChannelEdit',$program->id)}}" class="label label-danger"><i class="fa fa-pencil"> </i> Redaktə Et</a>
+                                                <a href="{{route('ProgramEdit',$program->id)}}" class="label label-danger"><i class="fa fa-pencil"> </i> Redaktə Et</a>
                                             </td>
                                         </tr>
                                     @endforeach

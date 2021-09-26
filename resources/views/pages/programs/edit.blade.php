@@ -4,7 +4,6 @@
     <!-- select2 CSS -->
     <link href="/vendors/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
 
-
     <!-- bootstrap-select CSS -->
     <link href="/vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
 
@@ -24,55 +23,125 @@
                 <div class="panel-wrapper collapse in">
                     <div class="panel-body">
                         <div class="form-wrap">
-                            <form action="{{route('ChannelEdit',$id)}}" method="post" class="mt-25 mb-25" enctype="multipart/form-data">
+                            <form action="{{route('ProgramEdit',$program->id)}}" method="post" class="mt-25 mb-25" enctype="multipart/form-data">
                                 @csrf
-
-
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">Ölkə </label>
-                                            <select  class="form-control filled-input rounded-input" name="country" required  >
-                                                <option disabled selected>Ölkə Seç</option>
-                                                @foreach($countries as $country)
-                                                    <option {{$channel->country_id == $country->id?'selected':''}} value="{{$country->id}}">{{$country->name}}</option>
+                                            <label class="control-label mb-10">TV Kanallar </label>
+                                            <select  class="form-control filled-input rounded-input" name="channel" required  >
+
+                                                @foreach($channels as $channel)
+                                                    <option {{$program->channel_id == $channel->id?'selected':''}} value="{{$channel->id}}">{{$channel->name}}</option>
                                                 @endforeach
                                             </select>
 
                                         </div>
                                     </div>
-
                                     <div class="col-md-4">
-
+                                        <div class="form-group">
+                                            <label class="control-label mb-10"> Serial yoxsa Veriliş </label>
+                                            <select  class="form-control filled-input rounded-input" name="type" required  >
+                                                <option {{$program->tyoe == "serial" ?'selected':''}} value="serial">Serial</option>
+                                                <option {{$program->tyoe == "program" ?'selected':''}} value="program">Veriliş</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
                                         <div class="form-group mb-30">
-                                            <label class="control-label mb-10 text-left">Logo</label>
+                                            <label class="control-label mb-10 text-left">Şəkil</label>
                                             <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                                                 <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
                                                 <span class="input-group-addon fileupload btn btn-default btn-anim btn-file"><i class="fa fa-upload"></i> <span class="fileinput-new btn-text">fayl seçin</span> <span class="fileinput-exists btn-text">Dəyiş</span>
-														<input type="file" name="logo" accept="image/png">
+														<input type="file" required name="image" accept="image"  >
 														</span> <a href="#" class="input-group-addon btn btn-default btn-anim fileinput-exists" data-dismiss="fileinput"><i class="fa fa-trash"></i><span class="btn-text"> Çıxart</span></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <label class="control-label mb-10 text-left"> Hazırda olan logo </label>
-                                          <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                        <img src="{{$channel->logo}}" width="72px" alt="">
-                                         </div>
+                                </div>
+
+                                <div class="mb-50 mt-20" style="border: 1px solid black; padding: 10px ;">
+
+                                    <div class="form-group mb-30">
+                                        <label class="control-label mb-10 text-left">Haftə içi Yayın günləri</label>
+
+
+                                        <div class="row ml-5 ">
+
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox1" type="checkbox" value="1" {{in_array("1",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox1"> B.e. </label>
+                                            </div>
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox2" type="checkbox" value="2" {{in_array("2",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox2"> Ç.a. </label>
+                                            </div>
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox3" type="checkbox" value="3" {{in_array("3",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox3"> Ç. </label>
+                                            </div>
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox4" type="checkbox" value="4" {{in_array("4",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox4"> C.a. </label>
+                                            </div>
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox5" type="checkbox" value="5" {{in_array("5",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox5"> C. </label>
+                                            </div>
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox6" type="checkbox" value="6" {{in_array("6",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox6"> Ş. </label>
+                                            </div>
+                                            <div class="col-md-1 checkbox checkbox-danger">
+                                                <input id="checkbox7" type="checkbox" value="7" {{in_array("7",json_decode($program->broadcasting))? "checked" : ""}} name="day[]">
+                                                <label for="checkbox7"> B. </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label class="control-label mb-10">Başlama Saatı</label>
+                                                    <input type="time" class="form-control filled-input rounded-input" value="{{$program->start_time}}" name="start_time">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="control-label mb-10">Bitmə Saatı</label>
+                                                    <input type="time" class="form-control filled-input rounded-input" value="{{$program->finish_time}}" name="finish_time">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-30 mt-30">
+                                        <label class="control-label mb-10 text-left"> Reytinq </label>
+                                        <div class="row" >
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control filled-input rounded-input"
+                                                       value="{{$program->rating}}"  name="rating">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="row" >
                                     @foreach($languages as $language)
                                         <div class="col-sm-3">
                                             <label class="control-label mb-10">({{$language->name}})</label>
                                             <input type="text" class="form-control filled-input rounded-input"
-                                                   value="{{tvchannel($channel_contents,$language->code)}}" name="channel_{{$language->code}}">
+                                             value="{{program($program_contents,$language->code,'name')}}" name="name_{{$language->code}}">
+                                            <textarea name="about_of_{{$language->code}}" class="form-control
+                                             mt-10"cols="30" rows="8">{{program($program_contents,$language->code,'about_of')}}</textarea>
                                         </div>
                                     @endforeach
                                 </div>
+
                                 <button type="submit" class="btn btn-info btn-rounded btn-block btn-anim mt-15">
                                     <i class="fa fa-plus"></i>
-                                    <span class="btn-text">Redaktə Et</span>
+                                    <span class="btn-text">Program məlumatlarını yenilə</span>
                                 </button>
                             </form>
                         </div>

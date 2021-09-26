@@ -77,10 +77,11 @@ class TvCannelController extends Controller
                 'icon' => 'success',
                 'button' => 'Bağla' ];
 
-            return back()->with('feedback', $feedbackdata);
+             return back()->with('feedback', $feedbackdata);
 
         }
         catch (\Exception $exception){
+
             $feedbackdata = ['title' => 'Başarısız !',
                 'text' => 'Yeni Tv Kanal məlumatları əlavə edilərkən xəta baş verdi.Xahiş edirik yenidən yoxlayın Xəta:'.$exception,
                 'icon' => 'warning',
@@ -106,8 +107,6 @@ class TvCannelController extends Controller
             $Channel =TvChannel::find($id);
 
             $Channel->country_id = $request->country;
-
-
 
             if ( $logo = $request->file('logo')) {
                 $request->validate([

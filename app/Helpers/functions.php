@@ -30,6 +30,19 @@
 
 
 
+ function program($array,$language,$column){
+
+        foreach ($array as $data){
+            if ( $data['lang'] == $language){
+                return $data[$column] ;
+            }
+        }
+
+
+    }
+
+
+
 
     function languages(){
         return \App\Models\Language::all();

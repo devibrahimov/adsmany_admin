@@ -66,7 +66,8 @@
                                         <div class="col-sm-3">
                                             <label class="control-label mb-10">({{$language->name}})</label>
                                             <input type="text" class="form-control filled-input rounded-input"
-                                                   value="{{tvchannel($channel_contents,$language->code)}}" name="channel_{{$language->code}}">
+                                                   value="{{tvchannel($channel_contents,$language->code)}}"
+                                                   name="channel_{{$language->code}}">
                                         </div>
                                     @endforeach
                                 </div>
