@@ -82,6 +82,7 @@ class ProgramsSerialsController extends Controller
          }
          catch (\Exception $exception){
              echo $exception;
+             exit;
              $feedbackdata = ['title' => 'Başarısız !',
                  'text' => 'Yeni Yayın Programı əlavə edilərkən xəta baş verdi.Xahiş edirik yenidən yoxlayın Xəta:'.$exception,
                  'icon' => 'warning',
@@ -115,7 +116,7 @@ class ProgramsSerialsController extends Controller
              $program->finish_time = $request->finish_time;
              $program->broadcasting = json_encode($request->day);
              $image = $request->file('image');
-             if ($image) {
+             if ($request->image != NULL) {
                  $request->validate([
                      'image' => 'required',
                  ]);
@@ -127,9 +128,10 @@ class ProgramsSerialsController extends Controller
                      $imageurl = $path . '/' . $newimagename; //for DB
                      $image->move($imagepath, $newimagename);
                      $imagename = $imageurl;
+                     $program->image = $imagename;
                  }
              }
-             $program->image = $imagename;
+
              $program->save();
 
              $program_contents = DB::table('programs_serials_langcontent')->where('programs_serials_id', $id)->get();
@@ -151,10 +153,10 @@ class ProgramsSerialsController extends Controller
                          array_push($datacontent,$data);
                      }
 
-                 }
-             }
+                 }//end foreach
+             }//end if
              else{
-                 foreach (languages() as $lang) {
+                 foreach (languages() as $lang){
                      $thisrow = DB::table('programs_serials_langcontent')->where('programs_serials_id', $id)
                          ->where('lang',$lang->code)->first();
 
@@ -175,22 +177,22 @@ class ProgramsSerialsController extends Controller
                          //end if null
                      }
                      else {//endif language code
-                         return 'asdasd';
-//                         $program_name = request('name_'.$lang->code);
-//                         $program_content = request('about_of_'.$lang->code);
-//
-//                         if ($program_name != null and $program_content != null){
-//                             $data = [
-//                                 'programs_serials_id'=> $program->id,
-//                                 'lang' => $lang->code,
-//                                 'name' => $program_name,
-//                                 'about_of' => $program_content
-//                             ];
-//                             array_push($datacontent,$data);
-//                         }
+
+                         $program_name = request('name_'.$lang->code);
+                         $program_content = request('about_of_'.$lang->code);
+
+                         if ($program_name != null and $program_content != null){
+                             $data = [
+                                 'programs_serials_id'=> $program->id,
+                                 'lang' => $lang->code,
+                                 'name' => $program_name,
+                                 'about_of' => $program_content
+                             ];
+                             array_push($datacontent,$data);
+                         }// end if
                      }//else
-                 }
-             }
+                 }//end foreach
+             }//end else
 
              DB::table('programs_serials_langcontent')->insert($datacontent);
 
