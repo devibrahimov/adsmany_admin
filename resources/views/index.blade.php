@@ -90,12 +90,12 @@
 
 <!-- Data table JavaScript -->
 <script src="/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-
+<script src="/dist/js/dataTables-data.js"></script>
 <!-- Slimscroll JavaScript -->
 <script src="/dist/js/jquery.slimscroll.js"></script>
 
 <!-- Fancy Dropdown JS -->
-<script src="dist/js/dropdown-bootstrap-extended.js"></script>
+<script src="/dist/js/dropdown-bootstrap-extended.js"></script>
 
 <!-- Sparkline JavaScript -->
 <script src="/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>

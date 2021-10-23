@@ -105,11 +105,11 @@
                                      <div class="row">
                                          <div class="col-md-6">
                                              <label class="control-label mb-10">Başlama Saatı</label>
-                                             <input type="time" class="form-control filled-input rounded-input"  name="start_time">
+                                             <input type="time" class="form-control filled-input rounded-input" required   name="start_time">
                                          </div>
                                          <div class="col-md-6">
                                              <label class="control-label mb-10">Bitmə Saatı</label>
-                                             <input type="time" class="form-control filled-input rounded-input"  name="finish_time">
+                                             <input type="time" class="form-control filled-input rounded-input" required  name="finish_time">
                                          </div>
                                      </div>
                                  </div>
@@ -122,7 +122,7 @@
                                  <label class="control-label mb-10 text-left"> Reytinq </label>
                                  <div class="row" >
                                      <div class="col-sm-3">
-                                         <input type="text" class="form-control filled-input rounded-input"  name="rating">
+                                         <input type="text" class="form-control filled-input rounded-input" required   name="rating">
                                      </div>
                                  </div>
                              </div>

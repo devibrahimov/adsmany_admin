@@ -47,9 +47,10 @@ class ProgramsSerialsController extends Controller
                      $imageurl = $path . '/' . $newimagename; //for DB
                      $image->move($imagepath, $newimagename);
                      $imagename = $imageurl;
+                     $program->image = $imagename;
                  }
              }
-             $program->image = $imagename;
+
              $program->save();
              $languages = Language::all();
              $programsdata = [];

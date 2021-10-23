@@ -16,7 +16,6 @@
             </div>
         </div>
 
-
         <div class="col-sm-12">
             <div class="panel panel-default border-panel card-view">
                 <div class="panel-heading">
@@ -29,7 +28,7 @@
                     <div class="panel-body">
                         <div class="table-wrap mt-40">
                             <div class="table-responsive">
-                                <table class="table mb-0">
+                                <table id="datable_1" class="table table-hover table-bordered display  mb-0">
                                     <thead>
                                     <tr>
                                         <th>#ID</th>
