@@ -48,4 +48,11 @@ Route::group(['middleware'=>'auth'],function(){
    Route::get('/program-redakte-et/{id}','ProgramsSerialsController@edit')->name('ProgramEdit');
    Route::post('/program-redakte-et/{id}','ProgramsSerialsController@update');
 
+
+    Route::get('/contact','ContactController@index')->name('contact.index');
+    Route::get('/yeni-contact-elave-et','ContactController@create')->name('contact.create');
+    Route::post('/yeni-contact-elave-et','ContactController@store')->name('contact.store');
+    Route::get('/contact-redakte-et/{id}','ContactController@edit')->name('contact.edit');
+    Route::post('/contact-redakte-et/{id}','ContactController@update')->name('contact.update');
+    Route::get('/contact-sil/{id}','ContactController@delete')->name('contact.delete');
 });

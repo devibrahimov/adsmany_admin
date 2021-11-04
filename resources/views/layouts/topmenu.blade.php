@@ -49,10 +49,10 @@
                                     <hr class="light-grey-hr ma-0"/>
                                     <ul>
                                         <li>
-                                            <a href="e-commerce.html">Dashboard</a>
+                                            <a href="/">Dashboard</a>
                                         </li>
                                         <li>
-                                            <a href="product.html">Products</a>
+                                            <a href="{{route('contact.index')}}">Contacts</a>
                                         </li>
                                         <li>
                                             <a href="product-detail.html">Product Detail</a>
