@@ -34,7 +34,7 @@
                         <li class="product-nicescroll-bar row">
                             <ul class="pa-20">
                                 <li class="col-md-3 col-xs-6 col-menu-list">
-                                    <a href="index.html"><div class="pull-left"><i class="ti-dashboard  mr-20"></i><span class="right-nav-text">Analytical</span></div><div class="clearfix"></div></a>
+                                    <a href="{{route('contact.index')}}"><div class="pull-left"><i class="ti-dashboard  mr-20"></i><span class="right-nav-text">Əlaqə</span></div><div class="clearfix"></div></a>
                                     <a href="index2.html"><div class="pull-left"><i class="ti-money  mr-20"></i><span class="right-nav-text">Cryptocurrency</span></div><div class="pull-right"><span class="label label-success">Hot</span></div><div class="clearfix"></div></a>
                                     <a href="profile.html"><div class="pull-left"><i class="ti-briefcase  mr-20"></i><span class="right-nav-text">Profile</span></div><div class="clearfix"></div></a>
                                 </li>
@@ -52,7 +52,7 @@
                                             <a href="/">Dashboard</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('contact.index')}}">Contacts</a>
+                                            <a href="#">Contact</a>
                                         </li>
                                         <li>
                                             <a href="product-detail.html">Product Detail</a>
@@ -76,23 +76,23 @@
                                     <hr class="light-grey-hr ma-0"/>
                                     <div class="product-carousel owl-carousel owl-theme text-center">
                                         <a href="#">
-                                            <img src="../img/chair.jpg" alt="chair">
+                                            <img src="/img/chair.jpg" alt="chair">
                                             <span>Circle chair</span>
                                         </a>
                                         <a href="#">
-                                            <img src="../img/chair2.jpg" alt="chair">
+                                            <img src="/img/chair2.jpg" alt="chair">
                                             <span>square chair</span>
                                         </a>
                                         <a href="#">
-                                            <img src="../img/chair3.jpg" alt="chair">
+                                            <img src="/img/chair3.jpg" alt="chair">
                                             <span>semi circle chair</span>
                                         </a>
                                         <a href="#">
-                                            <img src="../img/chair4.jpg" alt="chair">
+                                            <img src="/img/chair4.jpg" alt="chair">
                                             <span>wooden chair</span>
                                         </a>
                                         <a href="#">
-                                            <img src="../img/chair2.jpg" alt="chair">
+                                            <img src="/img/chair2.jpg" alt="chair">
                                             <span>square chair</span>
                                         </a>
                                     </div>
