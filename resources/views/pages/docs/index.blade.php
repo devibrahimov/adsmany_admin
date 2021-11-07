@@ -11,45 +11,38 @@
             <div class="panel panel-default card-view pa-0">
                 <div class="panel-wrapper collapse in">
                     <div class="panel-body pa-0">
-                        <div class="">
-                            <div class="col-lg-3 col-md-4 file-directory pa-0">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-content">
-                                        <div class="file-manager">
-                                            <div class="ma-15">
-                                                <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-orange btn-sm btn-block">
-                                                    Yeni ƏLavə Et
-                                                </a>
-                                            </div>
-                                            <div class="pl-15 mb-30">
-                                                <a href="#" class="file-control active"> Aşağıdakı başlıqlar Api url başlıqlarıdır</a>
-                                            </div>
+                            <div  class="pills-struct vertical-pills mt-40">
 
-                                            <h6 class="mb-10 pl-15">Folders</h6>
-                                            <ul class="folder-list mb-30">
-                                                <li class="active"><a href=""><i class="zmdi zmdi-folder"></i> Giriş</a></li>
-                                                <li><a href=""><i class="zmdi zmdi-folder"></i>Agency Qeydiyyat </a></li>
-                                                <li><a href=""><i class="zmdi zmdi-folder"></i>Agency Giriş</a></li>
-                                                <li><a href=""><i class="zmdi zmdi-folder"></i>Agency Çıxış</a></li>
-                                                <li><a href=""><i class="zmdi zmdi-folder"></i></a></li>
-                                                <li><a href=""><i class="zmdi zmdi-folder"></i> Books</a></li>
-                                            </ul>
+                               <div class="row">
+                                   <div class="col-sm-12" style="margin: 10px">
 
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                       <ul role="tablist" class="nav nav-pills ver-nav-pills" id="myTabs_10">
+                                           <li >
+                                               <a href="#myModal" data-toggle="modal" style="color: white" class="btn btn-primary btn-sm btn-block">
+                                                   Yeni ƏLavə Et
+                                               </a>
+                                           </li>
+                                           <li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="home_tab_10" href="#home_10">active</a></li>
+                                           <li role="presentation" class=""><a  data-toggle="tab" id="profile_tab_10" role="tab" href="#profile_10" aria-expanded="false">Istifadeci Girish hisse sGirish hissesi</a></li>
+                                       </ul>
+                                       <div class="tab-content" id="myTabContent_10">
+                                           <div  id="home_10" class="tab-pane fade active in" role="tabpanel">
+                                               <p>Lorem ipsum dolor sit amet, et pertinax ocurreret scribentur sit, eum euripidis assentior ei. In qui quodsi maiorum, dicta clita duo ut. Fugit sonet quo te. Ad vel quando causae signiferumque. Aperiam luptatum senserit eu vis, eu ius purto torquatos vituperatoribus.An nec fastidii eligendi molestiae.</p>
+                                           </div>
+                                           <div  id="profile_10" class="tab-pane fade" role="tabpanel">
+                                               <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.</p>
+                                           </div>
+                                           <div  id="dropdown_19" class="tab-pane fade " role="tabpanel">
+                                               <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+                                           </div>
+                                           <div  id="dropdown_20" class="tab-pane fade" role="tabpanel">
+                                               <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+
                             </div>
-                            <div class="col-lg-9 col-md-8 file-sec pt-15">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="row">
-                                        {{-- DBdan neticelerin geldiyi alan --}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -85,7 +78,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label"> Url (ana urlden sonrası)</label>
+                            <label class="col-lg-2 control-label"> Url (domaindən sonrası)</label>
                             <div class="col-lg-10">
                                 <input type="text" name="url"  class="form-control">
                             </div>
@@ -131,7 +124,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
-                                <button class="btn btn-default" type="submit">Send</button>
+                                <button class="btn btn-default" type="submit">Yadda Saxla</button>
                             </div>
                         </div>
                     </form>
