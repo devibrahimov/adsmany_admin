@@ -26,6 +26,9 @@
             <ul class="nav navbar-right top-nav pull-right">
 
                 <li>
+                    <a  href="{{route('ApiDocsController')}}"><i class="ti-book  top-nav-icon" style="font-size: 14px!important;margin-right: 5px;"> </i> API Docs</a>
+                </li>
+                <li>
                     <a id="open_right_sidebar" href="#"><i class="ti-settings  top-nav-icon"></i></a>
                 </li>
                 <li class="dropdown full-width-drp">
