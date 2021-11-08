@@ -35,11 +35,13 @@
 </head>
 
 <body>
+
 {{--<!-- Preloader -->--}}
 {{--<div class="preloader-it">--}}
 {{--    <div class="la-anim-1"></div>--}}
 {{--</div>--}}
 {{--<!-- /Preloader -->--}}
+
 <div class="wrapper theme-2-active navbar-top-light horizontal-nav">
 
    @include('layouts.topmenu')
