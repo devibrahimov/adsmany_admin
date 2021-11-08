@@ -4,7 +4,6 @@
 
 @endsection
 
-
 @section('content')
     <div class="row">
         <div class="col-sm-12  ">
@@ -15,12 +14,9 @@
 
                                <div class="row">
                                    <div class="col-sm-12" style="margin: 10px">
-
                                        <ul role="tablist" class="nav nav-pills ver-nav-pills" id="myTabs_10">
                                            <li >
-                                               <a href="#myModal" data-toggle="modal" style="color: white" class="btn btn-primary btn-sm btn-block">
-                                                   Yeni ƏLavə Et
-                                               </a>
+                                               <a href="#myModal" data-toggle="modal" style="color: white" class="btn btn-primary btn-sm btn-block">Yeni ƏLavə Et </a>
                                            </li>
                                            <li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="home_tab_10" href="#home_10">active</a></li>
                                            <li role="presentation" class=""><a  data-toggle="tab" id="profile_tab_10" role="tab" href="#profile_10" aria-expanded="false">Istifadeci Girish hisse sGirish hissesi</a></li>
