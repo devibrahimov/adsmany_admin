@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','User Create')
 @section('content')
             <!-- general form elements -->
@@ -10,10 +10,10 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="" method="POST">
-                   @include('back\layouts\partials\errors')
-                   @include('back\layouts\partials\alert')
+                   @include('back.layouts.partials.errors')
+                   @include('back.layouts.partials.alert')
                 @csrf
-             
+
                 <div class="card-body">
                 <div class="form-group">
                     <label for="">Ad</label>

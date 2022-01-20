@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','Program Yarat')
 @section('content')
             <!-- general form elements -->
@@ -10,8 +10,8 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="{{route('admin.language.create')}}" method="POST">
-                   @include('back\layouts\partials\errors')
-                   @include('back\layouts\partials\alert')
+                   @include('back.layouts.partials.errors')
+                   @include('back.layouts.partials.alert')
                 @csrf
                 <div class="card-body">
                 <div class="form-group">
@@ -48,7 +48,7 @@
                   </div>
                   </div>
                 <div class="card-body">
-                
+
                    <div class="mb-50 mt-20" style="border: 1px solid black; padding: 10px ;">
 
                              <div class="form-group mb-30">
@@ -86,7 +86,7 @@
 
                                  </div>
                              </div>
-                            
+
                                  <div class="col-md-12">
                                      <div class="row">
                                          <div class="col-md-6">
@@ -99,8 +99,8 @@
                                          </div>
                                      </div>
                                  </div>
-                                
-                            
+
+
 
                              <div class="form-group mb-30 mt-30">
                                  <label class="control-label mb-10 text-left"> Reytinq </label>

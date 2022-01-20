@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','Dil Yarat')
 @section('content')
             <!-- general form elements -->
@@ -10,10 +10,10 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="{{route('admin.language.create')}}" method="POST">
-                   @include('back\layouts\partials\errors')
-                   @include('back\layouts\partials\alert')
+                   @include('back.layouts.partials.errors')
+                   @include('back.layouts.partials.alert')
                 @csrf
-             
+
                 <div class="card-body">
                 <div class="form-group">
                     <label for="">Dil (hər dili öz dlində yazın)</label>

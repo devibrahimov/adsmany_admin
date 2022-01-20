@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','Ölkələr')
 @section('css')
   <link rel="stylesheet" href="{{asset('back')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -9,11 +9,11 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Country Table</h3>
-                @include('back\layouts\partials\alert')
+                @include('back.layouts.partials.alert')
               </div>
-              
+
               <div class="card-body">
-                
+
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <a href="{{route('admin.country.store')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Yeni Ölkə Yarat</a>
@@ -34,11 +34,11 @@
                                     <a href="{{route('admin.country.edit',$country->id)}}" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top" title="Duzenle">
                                         <i class="fa fa-pen"></i> Redaktə Et
                                     </a>
-                                    
+
                                     <a href="{{route('admin.country.delete',$country->id)}}" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Sil" onclick="return confirm('Əminsinizmi ?')">
                                         <i class="fa fa-trash"> Sil</i>
                                     </a>
-                                    
+
                                 </td>
                   </tr>
                   @endforeach

@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','Ölkə Yarat')
 @section('content')
             <!-- general form elements -->
@@ -10,10 +10,10 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="{{route('admin.language.create')}}" method="POST">
-                   @include('back\layouts\partials\errors')
-                   @include('back\layouts\partials\alert')
+                   @include('back.layouts.partials.errors')
+                   @include('back.layouts.partials.alert')
                 @csrf
-             
+
                 <div class="card-body">
                   @foreach($languages as $language)
                 <div class="form-group">
@@ -21,7 +21,7 @@
                     <input type="text" class="form-control"  name="country_{{$language->code}}">
                   </div>
                   @endforeach
-             
+
                 <div class="card-footer">
                   <button type="submit" class="btn btn-success btn-block">Əlavə Et</button>
                 </div>

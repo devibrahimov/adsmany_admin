@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','Program Düzəliş Et')
 @section('content')
             <!-- general form elements -->
@@ -10,8 +10,8 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="{{route('admin.program.create',$program->id)}}" method="POST">
-                   @include('back\layouts\partials\errors')
-                   @include('back\layouts\partials\alert')
+                   @include('back.layouts.partials.errors')
+                   @include('back.layouts.partials.alert')
                 @csrf
                 <div class="form-group">
                   <div class="col-sm-12">
@@ -89,7 +89,7 @@
 
                                  </div>
                              </div>
-                            
+
                                  <div class="col-md-12">
                                      <div class="row">
                                          <div class="col-md-6">
@@ -102,8 +102,8 @@
                                          </div>
                                      </div>
                                  </div>
-                                
-                            
+
+
 
                              <div class="form-group mb-30 mt-30">
                                  <label class="control-label mb-10 text-left"> Reytinq </label>

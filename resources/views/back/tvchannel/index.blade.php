@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','TV Kanallar')
 @section('css')
   <link rel="stylesheet" href="{{asset('back')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -9,11 +9,11 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Language Table</h3>
-                @include('back\layouts\partials\alert')
+                @include('back.layouts.partials.alert')
               </div>
-              
+
               <div class="card-body">
-                
+
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <a href="{{route('admin.tv.store')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Yeni TV Channel Yarat</a>

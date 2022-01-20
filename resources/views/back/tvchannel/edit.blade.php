@@ -1,4 +1,4 @@
-@extends('back\layouts\master')
+@extends('back.layouts.master')
 @section('title','TV Channel Düzəliş Et')
 @section('content')
             <!-- general form elements -->
@@ -10,12 +10,12 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="{{route('admin.tv.update',$channel->id)}}" method="POST" enctype="multipart/form-data">
-                   @include('back\layouts\partials\errors')
-                   @include('back\layouts\partials\alert')
+                   @include('back.layouts.partials.errors')
+                   @include('back.layouts.partials.alert')
                 @csrf
-             
+
                 <div class="card-body">
-              
+
                  <div class="form-group">
                    <div class="col-sm-12">
                     <label for="">Ölkə</label>
