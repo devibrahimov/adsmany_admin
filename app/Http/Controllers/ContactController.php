@@ -10,17 +10,17 @@ class ContactController extends Controller
     public function index()
     {
         $contact = Contact::get();
-        return view('pages.contacts.dashboard',compact('contact'));
+        return view('pages.contact.dashboard',compact('contact'));
     }
 
     public function create()
     {
-        return view('pages.contacts.create');
+        return view('pages.contact.create');
     }
 
     public function store(Request $request)
     {
-     
+
         $data = $request->only(['name','adress','email','phone','map']);
         $contact = Contact::create($data);
         return redirect()->route('contact.index');
@@ -29,7 +29,7 @@ class ContactController extends Controller
     public function edit($id)
     {
         $contact = Contact::find($id);
-        return view('pages.contacts.update',compact('contact'));
+        return view('pages.contact.update',compact('contact'));
     }
 
     public function update(Request $request,$id)
