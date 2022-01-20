@@ -32,7 +32,7 @@
                                         <div class="form-group">
                                             <label class="control-label mb-10">Ölkə </label>
                                                 <select  class="form-control filled-input rounded-input" name="country" required  >
-                                                    <option disabled selected>Ölkə Seç</option>
+                                                <option disabled selected>Ölkə Seç</option>
                                                 @foreach($countries as $country)
                                                   <option value="{{$country->id}}">{{$country->name}}</option>
                                                 @endforeach

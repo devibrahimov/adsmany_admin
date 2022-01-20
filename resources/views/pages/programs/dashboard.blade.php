@@ -35,8 +35,7 @@
                                         <th>#ID</th>
                                         <th>Ölkə </th>
                                         <th>Tv Kanal</th>
-                                        <th>Rəsim</th>
-                                        <th>Program </th>
+                                        <th>Logo</th>
                                         <th>Əməliyyatlar</th>
                                     </tr>
                                     </thead>
